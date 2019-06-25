@@ -83,10 +83,9 @@ a:visited {
 }
 
 .certificates {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  width: 100vw;
+ 
+  text-align: center;
+  
 }
 #resume {
   display: flex;
@@ -101,4 +100,5 @@ a:visited {
       grid-template-columns: 260px 1fr;
       grid-template-areas: "visual highlights";
     }
+    
   }
