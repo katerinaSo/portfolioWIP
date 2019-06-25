@@ -88,8 +88,10 @@ a:visited {
   
 }
 #resume {
-  
-  min-width: 90vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
   min-height: 500px;
 }
 @media (min-width: 648px) {
