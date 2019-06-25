@@ -88,9 +88,7 @@ a:visited {
   
 }
 #resume {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  
   min-width: 90vw;
   min-height: 500px;
 }
