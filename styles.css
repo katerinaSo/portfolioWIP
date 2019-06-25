@@ -1,0 +1,86 @@
+body{
+    background-color: #28283d;
+}
+img{
+    width:200px;
+    border:1px solid black;
+
+}
+.container{
+    display:grid;
+    grid-template-columns: 250px  2fr ;
+    border:1px solid silver;
+    padding:1em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+#portrait{
+    width:1.1rem;
+    margin-right: .4rem;
+    border-radius: 5px;
+
+}
+header{
+    text-align: center;
+    color:white;
+    background-color: #28283d;
+    padding:10px;
+    
+}
+h1{
+    letter-spacing: .1em;
+}
+h3{
+    text-align: center;
+    margin-top:2em;
+    color: orange;
+    letter-spacing: .05em;
+}
+strong{
+    letter-spacing: .1em;
+}
+#icons{
+    cursor: pointer;
+    justify-items: center;
+    font-size: 1.5em;
+   
+}
+a{
+    color:white;
+    display:inline-block;
+    margin-right: 1em;
+    margin-left:1em;
+    padding-bottom: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: .2em;
+    
+   
+    
+}
+a :hover{
+    color:aqua;
+}
+a:visited{
+    color:white;
+}
+.code{
+    font-family: monospace;
+    background:black;
+    color:white;
+    padding:1em 2em;
+
+}
+.sites a{
+    color:black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#resume{
+    text-align: center;
+}
+.certificates{
+    display:grid;
+    grid-template-columns:   1fr 1fr ;
+    justify-content: center;
+}

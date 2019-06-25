@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Katya Sorok Solstad </h1>
+        <div id="icons">
+            <a title="github" target="_blank" href="https://github.com/katerinaSo"><i class="fab fa-github"></i></a> <a title="art site" target="_blank"
+                href="https://www.sorokart.com"><i class="fas fa-palette"></i></a>
+        </div>
+        <a href="#biography"><strong>biography</strong></a>
+        <a href="#education"><strong>education and skills</strong></a>
+        <a href="#resume"><strong>print resume</strong></a>
+    </header>
+    <h3>Fun in Javascript:</h3>
+
+<!--  game R P S -->
+    <div class="container">
+        <div>
+            <a title="link to the game" target="_blank" href='https://rock-paper-scissors-simple-game-ks.netlify.com/'>
+                <img src="/images/RPaperS.png" />
+            </a>
+        </div>
+        <div>                  
+            <strong>creative solution example:</strong> 
+            <br> 
+            <br>  
+            <strong><em>problem:</em> </strong>
+            There was no indication that the coin flipped if the side was the same as for the previous flip.
+            <br>
+            <br>
+            <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+            <br>
+            <br>
+            <div class="code">
+            let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        </div>       
+         <br>       
+         <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/r-p-s-game/blob/master/scripts.js">view full code on github</a>
+         <a style="color:black;text-decoration:underline" target="_blank" href="https://rock-paper-scissors-simple-game-ks.netlify.com/"> play rock-paper-scissors </a>
+</div>
+
+    </div>
+    <!-- stopwatch codepen  -->
+    <div class="container">
+        <div><a title="link to codepen" target="_blank" href='https://codepen.io/katyaSo/pen/MLQZxx'><img src="/images/stopwatch.png" /></a></div>
+        <div>                   
+                <strong>creative solution example:</strong> 
+                <br> 
+                <br>  
+                <strong><em>problem:</em> </strong>
+               Counting was speeding up if start activated many times.
+                <br>
+                <br>
+                <strong><em>solution: </em></strong>clearInterval(count)
+                <br>
+                <br>
+                <div class="code">
+                        btnStart.onclick = function () {
+                            <br>
+                            clearInterval(count); 
+                            <br>
+                            count = setInterval(startWatch, 10); // in 1/10 of a second
+                            <br>
+                        };                    
+            </div>           
+             <br>
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://codepen.io/katyaSo/pen/MLQZxx"> full code in codepen</a>
+</div>
+    </div>
+    <!--  Number guessing game codepen  -->
+    <div class="container">
+        <div><a title="link to codepen" target="_blank" href='https://codepen.io/katyaSo/pen/XOZoYw'><img src="/images/guessNum.png" /></a></div>       
+        <div>                   
+                <strong>creative solution example:</strong> 
+                <br> 
+                <br>  
+                <strong><em>problem:</em> </strong>
+
+                The task to make guessing number game is very common and trivial. 
+                <br>
+                <br>
+                <strong><em>solution:</em></strong> Writing code for the guessing game was a good practice and creating mysterious atmosthere added some gaming value to this simple game. 
+                <br>          
+             <br>           
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://codepen.io/katyaSo/pen/XOZoYw">play the game in codepen</a>             
+</div>
+    </div>
+    </p>
+    <p>
+        <h3>Fun in React JS:</h3>
+        <!-- pokemons battle -->
+        <div class="container">
+            <div>
+                <a title="go to the game" target="_blank" href='https://pokemon-battle-two-hands.netlify.com/'><img
+                        src="/images/pokemonGame.png" /></a>
+            </div>
+            <div>                   
+                <strong>creative solution example:</strong> 
+                <br> 
+                <br>  
+                <strong><em>problem:  </em> </strong>
+
+                I worked with massive json file for pokemons data. There were over 600 cards. And not all data was clean and consistent to be used.
+                <br>
+                <br>
+                <strong><em>solution:</em></strong> I cleaned the data, organized it and found the way to display cards randomly from this very large set of cards. 
+                <br>
+                <br>
+                <div class="code">
+                        const Card = ({ id, name, type, power }) => {
+                            <br>
+                            const getImage = id => {
+                                <br>
+                              let address;
+                              <br>
+                              if (id <= 9) {
+                                  <br>
+                                address = `/img/00${id}${name}.png`;
+                                <br>
+                              } else if (id > 9 && id <= 99) {
+                                  <br>
+                                address = `/img/0${id}${name}.png`;
+                                <br>
+                              } else if (id > 99 && id <= 999) {
+                                  <br>
+                                address = `/img/${id}${name}.png`;
+                                <br>
+                              }
+                              <br>
+                              return address;
+                              <br>
+                            };
+            </div>           
+             <br>
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/pokemon-battle-react/tree/master/src">view sourse code and assets on github</a>
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://pokemon-battle-two-hands.netlify.com/"> view the game of pokemon cards battle </a>
+</div>
+        </div>
+
+        <!-- coin flip game -->
+        <div class="container">
+            <div>
+                <a title="go to the game" target="_blank" href='https://simple-coin-flip-react.netlify.com/'><img
+                        src="/images/CoinFlip.png" /></a>
+            </div>
+            <div>         
+                        <strong>creative solution example:</strong> 
+                        <br> 
+                        <br>  
+                        <strong><em>problem:</em> </strong>
+                        There was no indication that the coin flipped if the side was the same as for the previous flip.
+                        <br>
+                        <br>
+                        <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+                        <br>
+                        <br>
+                        <div class="code">
+                        let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                    </div>                   
+                     <br>                   
+                     <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
+                     <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>                                
+    </div>
+    </div>
+    <!-- slot machine game -->
+    <div class="container">
+            <div>
+    <a title="go to the game" target="_blank" href='https://react-simple-slot-machine.netlify.com/'><img src="/images/slotMachine.png" /></a>
+            </div>
+            <div>                   
+                <strong>creative solution example:</strong> 
+                <br> 
+                <br>  
+                <strong><em>problem:</em> </strong>
+                My son wanted to play slot machine with specific images of things he loves. 
+
+                Coordinate numbers and images for slot machine. 
+                <br>
+                <br>
+                <strong><em>solution:</em></strong> Perhaps it was not a difficult task to make this fun slot machine in react. My son wanted it to show a race car, drums and a guitar. (Things he loves) This was a simple exercise in react that was fun to use for my son. 
+                <br>
+                <br>
+                <div class="code">
+                        {(l === "1" && "🎸") || (l === "2" && "🥁") || (l === "3" && "🏎")}
+                        <br>
+                        Machine.defaultProps = { choices: ["1", "2", "3"] };
+            </div>            
+             <br>           
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/slot-machine-simple-react">view full code with react components on github</a>
+             <a style="color:black;text-decoration:underline" target="_blank" href="https://react-simple-slot-machine.netlify.com/"> play slot machine of race cars and music</a>
+</div>
+</div>
+            <h3> Web Apps and Sites:</h3>
+        <!-- e-commerce  -->
+    
+        <div class="container">
+                <div>
+        <a title="link to the site" target="_blank" href='https://phone-store-in-react.netlify.com/'><img src="/images/phoneCart.png" /></a>
+                </div>
+                <div>                    
+                    <strong>creative solution example:</strong> 
+                    <br> 
+                    <br>  
+                    <strong><em>problem:</em> </strong>
+                    There was no indication that the coin flipped if the side was the same as for the previous flip.
+                    <br>
+                    <br>
+                    <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+                    <br>
+                    <br>
+                    <div class="code">
+                    let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                </div>               
+                 <br>                
+                 <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
+                 <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>
+</div>
+                </div>
+
+                <!-- coffee shop site -->
+                <div class="container">
+                        <div>
+        <a title="link to the site"  target="_blank" href='https://kookoo-cafe.netlify.com/'><img src="/images/KookooCafe.png" /></a>
+    </div>
+    <div>                
+       <strong>creative solution example:</strong> 
+        <br> 
+        <br>  
+        <strong><em>problem:</em> </strong>
+        There was no indication that the coin flipped if the side was the same as for the previous flip.
+        <br>
+        <br>
+        <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+        <br>
+        <br>
+        <div class="code">
+        let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    </div>   
+     <br>   
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>
+</div>
+    </div>
+    <!-- mama's nurse todo app  -->
+    <div class="container">
+            <div>
+
+        <a title="link to the app" target="_blank" href='https://todo-app-public.firebaseapp.com/#/'><img src="/images/CRUDApp.png" /></a>
+    </div>
+    <div>                   
+        <strong>creative solution example:</strong> 
+        <br> 
+        <br>  
+        <strong><em>problem:</em> </strong>
+        There was no indication that the coin flipped if the side was the same as for the previous flip.
+        <br>
+        <br>
+        <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+        <br>
+        <br>
+        <div class="code">
+        let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    </div>   
+     <br>   
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>
+</div>
+    </div>
+    <!-- chat room WIP -->
+    <div class="container">
+            <div>
+        <a title="link to the app" target="_blank" href='https://chatty-c99a7.firebaseapp.com/channel/general'></a><img
+                src="/images/chatRoom.png" /></a>
+            </div>
+            <div>                    
+                <strong>WIP:</strong> 
+                <br> 
+                <br>  
+                <strong><em>problem:</em> </strong>
+                It is a fairy big project on chat rooms app similar to slack site. I am working on it in react with the help of some tutorials.  
+                <br>
+                <br>
+                <strong><em>solution:</em></strong> Some progress is done with a help of tutorials.  Some conversations were done between me, my son and a friend in one chatroom. 
+                <br>
+                <br>
+                <div class="code">
+                <img src="/images/filesWIP.png"/>
+            </div>           
+             <br>
+</div>
+            </div>
+            <!-- biography -->
+            <h3 id="biography"> about me:</h3>
+            <div class="container">
+                <div><img src="images/portrait.png"/></div>
+                <div>I was born and raised in Russia. Last 27 years I have lived in USA. As a single mother I have raised a son who just finished high school.  </div>                
+            </div>
+
+            <!-- edication skills certificates  -->
+            <h3 id="education"> some online courses:</h3>
+            <div class="certificates">
+                <div style="text-align: center">       
+                <iframe style="width: 300px; height: 213px;" src="/certs/certCSS.pdf" height="213" width="300" frameborder="0"></iframe>
+                <iframe style="width: 300px; height: 213px;" src="/certs/certHTML.pdf" height="213" width="300" frameborder="0"></iframe>
+   
+                         
+                <iframe style="width: 300px; height: 213px;" src="/certs/certJS.pdf" height="213" width="300" frameborder="0"></iframe> 
+                <iframe style="width: 300px; height: 213px;" src="/certs/certPython.pdf" height="213" width="300" frameborder="0"></iframe> 
+            
+           
+                <iframe style="width: 300px; height: 213px;" src="/certs/certSQL.pdf" height="213" width="300" frameborder="0"></iframe>
+                </div>
+                <div style="text-align: center"> 
+                <iframe style="width: 300px; height: 213px;" src="/certs/certReact.pdf" height="213" width="300" frameborder="0"></iframe> 
+            
+                    
+                <iframe style="width: 300px; height: 213px;" src="/certs/certificateUX.pdf" height="213" width="300" frameborder="0"></iframe> 
+                <iframe style="width: 300px; height: 213px;" src="/certs/certificateVisionStudio.pdf" height="213" width="300" frameborder="0"></iframe>  
+           
+                   
+                    <iframe style="width: 300px; height: 213px;" src="/certs/certificateWebAnimation.pdf" height="213" width="300" frameborder="0"></iframe> 
+                    <iframe style="width: 300px; height: 213px;" src="/certs/certWebVR.pdf" height="213" width="300" frameborder="0"></iframe>  
+                </div>   
+                </div>
+
+                <!-- resume -->
+            <h3 id="resume"> resume:</h3>
+            <div id='resume'>
+                    <iframe style="width: 700px; height: 833px;" src="/images/resume.pdf" height="240" width="320" frameborder="0"></iframe>
+                </div>
+</body>
+
+</html>
