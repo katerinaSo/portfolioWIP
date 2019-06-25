@@ -83,18 +83,19 @@ a:visited{
     cursor: pointer;
     text-decoration: underline;
 }
-#resume{
+/* #resume{
     text-align: center;
-}
+} */
 .certificates{
     display:grid;
     grid-template-columns:   1fr ;
     justify-content: center;
 }
-#iframe{
-   display:block;
-    width: 100%; 
-    height: 1700px;
+#resume{
+    
+  display:block;
+    width: 100vw; 
+    
 }
 @media (min-width: 481px) and (max-width: 768px) { 
     .container{
