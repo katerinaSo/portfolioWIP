@@ -1,108 +1,104 @@
-body{
-    background-color: #28283d;
+body {
+  background-color: #28283d;
 }
-img{
-    width:200px;
-    border:1px solid black;
-
+img {
+  width: 200px;
+  border: 1px solid black;
 }
-.container{
-    display:grid;
-    grid-template-areas: "visual"
+.container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "visual "
     "highlights";
-    border:1px solid silver;
-    padding:1em;
-    margin-bottom: 1em;
-    background-color: white;
-}
-.visual{
-    grid-area: visual;
-}
-.highlights{
-    grid-area: highlights;
-}
-#portrait{
-    width:1.1rem;
-    margin-right: .4rem;
-    border-radius: 5px;
-
-}
-header{
-    text-align: center;
-    color:white;
-    background-color: #28283d;
-    padding:10px;
-    
-}
-h1{
-    letter-spacing: .1em;
-}
-h3{
-    text-align: center;
-    margin-top:2em;
-    color: orange;
-    letter-spacing: .05em;
-}
-strong{
-    letter-spacing: .1em;
-}
-#icons{
-    cursor: pointer;
-    justify-items: center;
-    font-size: 1.5em;
-   
-}
-a{
-    color:white;
-    display:inline-block;
-    margin-right: 1em;
-    margin-left:1em;
-    padding-bottom: 1em;
-    text-decoration: none;
-    cursor: pointer;
-    letter-spacing: .2em;
-    
-   
-    
-}
-a :hover{
-    color:aqua;
-}
-a:visited{
-    color:white;
-}
-.code{
-    font-family: monospace;
-    background:black;
-    color:white;
-    padding:1em 2em;
-
-}
-.sites a{
-    color:black;
-    cursor: pointer;
-    text-decoration: underline;
+  border: 1px solid silver;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: white;
 }
 
-.certificates{
-    display:grid;
-    grid-template-columns:   1fr ;
-    justify-content: center;
+.visual {
+  grid-area: visual;
 }
-#resume{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    min-width: 90vw; 
-    min-height:500px;  
+.highlights {
+  grid-area: highlights;
+  width: 90%;
+}
+#portrait {
+  width: 1.1rem;
+  margin-right: 0.4rem;
+  border-radius: 5px;
+}
+header {
+    width:100vw;
+  text-align: center;
+  color: white;
+  background-color: #28283d;
+  padding: 10px;
+}
+h1 {
+  letter-spacing: 0.1em;
+}
+h3 {
+  text-align: center;
+  margin-top: 2em;
+  color: orange;
+  letter-spacing: 0.05em;
+}
+strong {
+  letter-spacing: 0.1em;
+}
+#icons {
+  cursor: pointer;
+  justify-items: center;
+  font-size: 1.5em;
+}
+a {
+  color: white;
+  display: inline-block;
+  margin-right: 1em;
+  margin-left: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+}
+a :hover {
+  color: aqua;
+}
+a:visited {
+  color: white;
+}
+.code {
+  font-family: monospace;
+  background: black;
+  color: white;
+  padding: 1em 2em;
+}
+.sites a {
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-@media (min-width: 481px) and (max-width: 768px) { 
-    .container{
-        grid-area: "visual highlights"
-               
+.certificates {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  width: 100vw;
+}
+#resume {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  min-width: 90vw;
+  min-height: 500px;
+}
+@media (min-width: 648px) {
+    .container {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      grid-template-areas: "visual highlights";
     }
-}
-
-    
-
+  }
