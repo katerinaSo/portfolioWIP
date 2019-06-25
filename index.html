@@ -36,14 +36,37 @@
             <br> 
             <br>  
             <strong><em>problem:</em> </strong>
-            There was no indication that the coin flipped if the side was the same as for the previous flip.
+            How to create a data structure for this game to avoid a lot of repetitions. 
             <br>
             <br>
-            <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+            <strong><em>solution:</em></strong> I have analyzed the game and interconnection of three choices (rock, paper, scissors) and came up with the data structure of an array that allowed me to greatly shorten the code for checking.
             <br>
             <br>
             <div class="code">
-            let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                    function game(choice) {
+                        <br>
+                        const arr = ["s", "r", "p", "s", "r"];
+                        <br>
+                        let personChoice = choice;
+                        <br>
+                        let robotChoice = Math.round(Math.random() * 3);
+                        <br>
+                        let winner;
+                        <br>                      
+                        if (personChoice === arr[robotChoice]) {
+                            <br>
+                          winner = "tie";
+                          <br>
+                        } else if (personChoice === arr[robotChoice - 1]) {
+                            <br>
+                          winner = "robot";
+                          <br>
+                        } else if (personChoice === arr[robotChoice + 1]) {
+                            <br>
+                          winner = "person";
+                          <br>
+                        }
+                        <br>
         </div>       
          <br>       
          <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/r-p-s-game/blob/master/scripts.js">view full code on github</a>
@@ -90,7 +113,7 @@
                 The task to make guessing number game is very common and trivial. 
                 <br>
                 <br>
-                <strong><em>solution:</em></strong> Writing code for the guessing game was a good practice and creating mysterious atmosthere added some gaming value to this simple game. 
+                <strong><em>solution:</em></strong> Writing code for the guessing game was a good practice and creating a mysterious atmosphere added some gaming value to this simple game.
                 <br>          
              <br>           
              <a style="color:black;text-decoration:underline" target="_blank" href="https://codepen.io/katyaSo/pen/XOZoYw">play the game in codepen</a>             
@@ -111,7 +134,7 @@
                 <br>  
                 <strong><em>problem:  </em> </strong>
 
-                I worked with massive json file for pokemons data. There were over 600 cards. And not all data was clean and consistent to be used.
+                I worked with massive json file for pokemon data. There were over 600 cards. And not all data was clean and consistent to be used.
                 <br>
                 <br>
                 <strong><em>solution:</em></strong> I cleaned the data, organized it and found the way to display cards randomly from this very large set of cards. 
@@ -188,7 +211,7 @@
                 Coordinate numbers and images for slot machine. 
                 <br>
                 <br>
-                <strong><em>solution:</em></strong> Perhaps it was not a difficult task to make this fun slot machine in react. My son wanted it to show a race car, drums and a guitar. (Things he loves) This was a simple exercise in react that was fun to use for my son. 
+                <strong><em>solution:</em></strong> This was a simple exercise in react that was fun to use for my son. 
                 <br>
                 <br>
                 <div class="code">
@@ -213,18 +236,45 @@
                     <br> 
                     <br>  
                     <strong><em>problem:</em> </strong>
-                    There was no indication that the coin flipped if the side was the same as for the previous flip.
+                    Creating e-commerce website that using paypal for payments.
                     <br>
                     <br>
-                    <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+                    <strong><em>solution:</em></strong> Setting up PayPal sandbox, making sure that items in the cart are editable in many ways, make sure that if an item is in the cart user can see it right away on the main products page.  
                     <br>
                     <br>
                     <div class="code">
-                    let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                            class ProductProvider extends Component {
+                                <br>
+                                state = {
+                                    <br>
+                                  products: [],
+                                  <br>
+                                  detailProduct: detailProduct,
+                                  <br>
+                                  cart: [],
+                                  <br>
+                                  modalOpen: false,
+                                  <br>
+                                  modalProduct: detailProduct,
+                                  <br>
+                                  cartSubTotal: 0,
+                                  <br>
+                                  cartTax: 0,
+                                  <br>
+                                  cartTotal: 0
+                                  <br>
+                                };
+                                <br>
+                                componentDidMount() {
+                                    <br>
+                                  this.setProducts();
+                                  <br>
+                                }
+                                <br>
                 </div>               
                  <br>                
-                 <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
-                 <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>
+                 <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/react-commerce-phones-paypal">view the code on github</a>
+                 <a style="color:black;text-decoration:underline" target="_blank" href="https://phone-store-in-react.netlify.com/"> visit the mock up site</a>
 </div>
                 </div>
 
@@ -238,18 +288,28 @@
         <br> 
         <br>  
         <strong><em>problem:</em> </strong>
-        There was no indication that the coin flipped if the side was the same as for the previous flip.
+        To create one html page for a local coffee shop. (WIP)
         <br>
         <br>
-        <strong><em>solution:</em></strong> I made colors of a button and a title change to random color with every flip of the coin.
+        <strong><em>solution:</em></strong> I took pictures of a local coffee shop myself and tried to recreate an atmosphere of a very cozy place. There was an interesting idea implemented where people can put their nicknames as frequent guests of the shop. I thought it might create a feeling of the shop being a place to make new friendships. 
         <br>
         <br>
         <div class="code">
-        let random = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                // add customer/friend
+                <br>
+                UI.prototype.addCustomer = function(customer) {
+                    <br>
+                  console.log(customer);
+                  <br>
+                  const div = document.createElement("div");
+                  <br>
+                  div.classList.add("person");
+                  <br>
+                  
     </div>   
      <br>   
-     <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/coin-flip-react/blob/master/src/App.js">view full code on github</a>
-     <a style="color:black;text-decoration:underline" target="_blank" href="https://simple-coin-flip-react.netlify.com/"> play the game of coin flipping</a>
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://github.com/katerinaSo/KooKooCoffeeShop">view the code on github</a>
+     <a style="color:black;text-decoration:underline" target="_blank" href="https://kookoo-cafe.netlify.com/"> take a look at site in progress</a>
 </div>
     </div>
     <!-- mama's nurse todo app  -->
