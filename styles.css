@@ -8,11 +8,18 @@ img{
 }
 .container{
     display:grid;
-    grid-template-columns: 250px  2fr ;
+    grid-template-areas: "visual"
+    "highlights";
     border:1px solid silver;
     padding:1em;
     margin-bottom: 1em;
     background-color: white;
+}
+.visual{
+    grid-area: visual;
+}
+.highlights{
+    grid-area: highlights;
 }
 #portrait{
     width:1.1rem;
@@ -81,6 +88,15 @@ a:visited{
 }
 .certificates{
     display:grid;
-    grid-template-columns:   1fr 1fr ;
+    grid-template-columns:   1fr ;
     justify-content: center;
 }
+@media (min-width: 481px) and (max-width: 768px) { 
+    .container{
+        grid-area: "visual highlights"
+               
+    }
+}
+
+    
+
