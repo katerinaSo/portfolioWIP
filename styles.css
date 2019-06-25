@@ -83,20 +83,20 @@ a:visited{
     cursor: pointer;
     text-decoration: underline;
 }
-/* #resume{
-    text-align: center;
-} */
+
 .certificates{
     display:grid;
     grid-template-columns:   1fr ;
     justify-content: center;
 }
 #resume{
-    
-  display:block;
-    width: 100vw; 
-    
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    min-width: 90vw; 
+    min-height:500px;  
 }
+
 @media (min-width: 481px) and (max-width: 768px) { 
     .container{
         grid-area: "visual highlights"
