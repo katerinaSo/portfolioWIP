@@ -92,11 +92,11 @@ a:visited {
   text-align: center;
 }
 #resume {
-  display: flex;
+  
   justify-content: center;
   text-align: center;
   width: 100vw;
-  min-height: 500px;
+  height:100vh;
 }
 @media (min-width: 648px) {
   .project {
@@ -104,4 +104,10 @@ a:visited {
     grid-template-columns: 260px 1fr;
     grid-template-areas: "visual highlights";
   }
+  
+}
+@media(min-width:800px){
+    .highlights{
+        width:80%;
+    }
 }
