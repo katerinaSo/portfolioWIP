@@ -7,6 +7,7 @@ body {
 img {
   width: 200px;
   border: 1px solid black;
+  
 }
 .container{
     display:grid;
@@ -22,14 +23,15 @@ img {
     "highlights";
   border-bottom: 0.5em solid #28283d;
   padding: 3em 1em 1em 1em;
-
   margin:auto;
-
   background-color: white;
+ 
 }
 
 .visual {
   grid-area: visual;
+ text-align: center;
+ margin-bottom: 1em;
 }
 .highlights {
   grid-area: highlights;
@@ -111,4 +113,25 @@ a:visited {
     .highlights{
         width:80%;
     }
+}
+@media(min-width:648){
+  .project {
+    display: grid;
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "visual "
+      "highlights";
+    border-bottom: 0.5em solid #28283d;
+    padding: 3em 1em 1em 1em;
+    margin:auto;
+    background-color: white;
+   
+  }
+}
+footer{
+  color:white;
+  text-align: center;
+  font-size: .7rem;
+  padding: 0.7em 1em 2.3em 1em;;
 }
