@@ -398,6 +398,119 @@
                 href="https://chatty-c99a7.firebaseapp.com/channel/general"> you may try to login and say something </a>
         </div>
     </div>
+    <h3>Working with Algorithms:</h3>
+    <div class="project">
+        <div class="visual">
+            <a title="link to codepen" target="_blank" href='https://github.com/katerinaSo/weightedQuickUnionFU'>
+            <img src="/images/perlocation.png" /></a>
+        </div>
+        <div class="highlights">
+            <strong>creative solution example:</strong>
+            <br>
+            <br>
+            <strong><em>problem:</em></strong>
+            Write  algorithm Quick Weighted Union (used in perlocations) in JavaScript using JavaScript as Javascript without translation from Java with classes. 
+            <br>
+            <br>
+            <strong><em>solution:</em></strong>I created a data strucure as an object where keys are playing a role of Ids and values are arrays of items. This way I could "weigh" by the size of an arrays. 
+            <br>
+            <br>
+            <div class="code">
+           
+function createInitialSet(n) {
+    <br>
+    let obj = {};
+    <br>
+    let vals = [];
+    <br>
+    for (let i = 0; i < n; i++) {
+        <br>
+      vals[i] = [i];
+    </n>
+    }
+<br>
+
+    return Object.assign(obj, vals);
+</br>
+  }
+  <br>
+</n>
+<br>
+
+  let objects = createInitialSet(10);
+<br>
+<br>
+
+  function quickWeightedFindUnion(a, b) {
+<br>
+    let roots = Object.keys(objects);
+<br>
+    let values = Object.values(objects);
+<br>
+  
+  
+   <br>
+    &nbsp function find(a) {
+    <br>
+      &nbsp while (a != roots[a]) {
+    <br>
+        &nbsp a = roots[a];
+    
+      }
+    <br>
+      &nbsp return a;
+   
+    }
+<br>
+  
+  
+<br>
+    let root_of_a = find(a);
+<br>
+    let root_of_b = find(b);
+<br>
+  
+    
+    if (root_of_a === root_of_b) {
+    <br>
+      return;
+    <br>
+    } else {
+    <br>
+     
+      if (values[root_of_a].length > values[root_of_b].length) {
+    <br>
+        roots[root_of_b] = root_of_a;
+    <br>
+        values[root_of_a] = [...values[root_of_a], ...values[root_of_b]];
+    <br>
+        delete values[root_of_b];
+    <br>
+      } else {
+    <br>
+        roots[root_of_a] = root_of_b;
+    <br>
+        values[root_of_b] = [...values[root_of_b], ...values[root_of_a]];
+    <br>
+        delete values[root_of_a];
+    <br>
+      }
+    <br>
+    }
+<br>
+<br>
+  
+    return Object.assign(objects, values);
+</n>
+  }
+</n>
+            </div>
+            <br>
+            <a style="color:black;text-decoration:underline" target="_blank"
+                href="https://github.com/katerinaSo/weightedQuickUnionFU"> full code on github</a>
+            
+        </div>
+    </div>
     <!-- biography -->
     <h3 id="biography"> About Me:</h3>
     <div class="project">
@@ -438,6 +551,7 @@
         </ul>
         
      </div>
+     
 </div>
 <div class="project">
         <div class="visual"><img src="/images/books.jpg"/></div>
@@ -460,57 +574,9 @@
                     <li>Adobe Photoshop</li>
                     <li>Adobe Illustrator</li>
                     <li>AdobeXD</li>
-                    
-                    
-                    
-                     
-
-                </ul>
-            
-            
+                </ul>            
          </div>
-    </div>
-    <!-- <div class="certificates">
-        <div class='certPics'>
-            <img src="certs/certCSS.png"/>
-            <img src="certs/certJavascript.png"/>   
-            <img src="certs/certPython3.png"/>
-            <img src="certs/certHTML.png"/>
-            <img src="certs/certSQL.png"/>
-            <img src="certs/certReact.png"/>
-            <img src="certs/certWebAnim.png"/>
-            <img src="certs/certInvision.png"/>
-            <img src="certs/certVR.png"/>
-            <img src="certs/certUX.png"/>
-        </div> -->
-        
-
-        
-                
-      
-                <!-- <iframe style="width: 200px; height: 140px;" src="/certs/certCSS.pdf" height="213" width="200" frameborder="0"></iframe>
-                <iframe style="width: 200px; height: 140px;" src="/certs/certHTML.pdf" height="213" width="200" frameborder="0"></iframe>
-   
-                         
-                <iframe style="width: 200px; height: 140px;" src="/certs/certJS.pdf" height="213" width="200" frameborder="0"></iframe> 
-                <iframe style="width: 200px; height: 140px;" src="/certs/certPython.pdf" height="213" width="200" frameborder="0"></iframe> 
-            
-           
-                <iframe style="width: 200px; height: 140px;" src="/certs/certSQL.pdf" height="213" width="200" frameborder="0"></iframe>
-                
-                <iframe style="width: 200px; height: 140px;" src="/certs/certReact.pdf" height="213" width="200" frameborder="0"></iframe> 
-            
-                    
-                <iframe style="width: 200px; height: 140px;" src="/certs/certificateUX.pdf" height="213" width="200" frameborder="0"></iframe> 
-                <iframe style="width: 200px; height: 140px;" src="/certs/certificateVisionStudio.pdf" height="213" width="200" frameborder="0"></iframe>  
-           
-                   
-                    <iframe style="width: 200px; height: 140px;" src="/certs/certificateWebAnimation.pdf" height="213" width="300" frameborder="0"></iframe> 
-                    <iframe style="width: 200px; height: 140px;" src="/certs/certWebVR.pdf" height="213" width="200" frameborder="0"></iframe>   -->
-                  
-                
-    </div>
-
+    </div>   
     <footer>
         created by Katya Sorok Solstad @2019
     </footer>
