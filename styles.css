@@ -35,7 +35,7 @@ img {
 }
 .highlights {
   grid-area: highlights;
-  width: 90%;
+  width: 85%;
   padding-left:2em;
 }
 
